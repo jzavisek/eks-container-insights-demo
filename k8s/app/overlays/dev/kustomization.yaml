@@ -4,5 +4,6 @@ commonLabels:
   environment: dev
 bases:
   - ../../base
-resources:
-  - ./namespace.yaml
+images:
+  - name: 805382315593.dkr.ecr.eu-central-1.amazonaws.com/jz-demo-web
+    newTag: v1.0.0

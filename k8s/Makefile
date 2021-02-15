@@ -1,5 +1,11 @@
 SHELL	:= sh
 
+# Namespaces
+
+apply-namespaces:
+	kubectl apply -f ./namespaces/dev.yaml && \
+	kubectl apply -f ./namespaces/prod.yaml
+
 # Nginx ingress
 
 apply-nginx:
