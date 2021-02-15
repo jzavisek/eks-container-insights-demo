@@ -1,0 +1,5 @@
+# See: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-logs.html
+
+resources:
+  - namespace.yaml
+  - fluentd.yaml

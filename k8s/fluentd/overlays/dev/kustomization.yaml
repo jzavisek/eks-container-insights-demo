@@ -1,0 +1,6 @@
+commonLabels:
+  environment: dev
+bases:
+  - ../../base
+resources:
+  - configmap.yaml

@@ -24,3 +24,11 @@ apply-web:
 
 delete-web:
 	kubectl delete -k ./app/overlays/dev
+
+# Fluentd
+
+apply-fluentd:
+	kubectl apply -k ./fluentd/overlays/dev
+
+delete-fluentd:
+	kubectl delete -k ./fluentd/overlays/dev
