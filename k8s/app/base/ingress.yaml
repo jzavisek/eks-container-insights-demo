@@ -15,7 +15,3 @@ spec:
             backend:
               serviceName: web
               servicePort: http
-              # service:
-              #   name: web
-              #   port:
-              #     name: http

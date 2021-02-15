@@ -28,6 +28,7 @@ aws eks --region <region-code> update-kubeconfig --name <cluster_name>
 
 * [VPC Module](https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest)
 * [EKS Module](https://registry.terraform.io/modules/terraform-aws-modules/eks/aws/latest)
+  * [Variables](https://github.com/terraform-aws-modules/terraform-aws-eks/blob/master/variables.tf)
 
 ## Terraform providers
 

@@ -1,6 +1,6 @@
 
 # Get availability zones in the current region
-data "aws_availability_zones" "this" {}
+data "aws_availability_zones" "available" {}
 
 # Get region configured in the provider
 data "aws_region" "current" {}
