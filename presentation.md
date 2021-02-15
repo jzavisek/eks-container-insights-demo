@@ -1,5 +1,4 @@
 
-
 ## Things to go through
 
 * AWS deployment options
@@ -9,3 +8,7 @@
 * ECR
 * Docker image + push
 * Ingress controller
+  * NLB = L4
+  * ELB = L7, terminates SSL
+  * `proxy-real-ip-cidr: XXX.XXX.XXX/XX` -> `proxy-real-ip-cidr: 10.0.0.0/16`
+  * comment `service.beta.kubernetes.io/aws-load-balancer-ssl-cert:`

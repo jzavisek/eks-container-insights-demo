@@ -14,6 +14,12 @@ export KUBECONFIG=/Volumes/STRV/Dev/_Meetings/eks/infra/kubeconfig_jz-demo-eks-d
 aws eks --region <region-code> update-kubeconfig --name <cluster_name>
 ```
 
+## Concepts
+
+* [Architecture](https://aws.amazon.com/getting-started/hands-on/deploy-kubernetes-app-amazon-eks/)
+* [Terraform EKS tutorial](https://learn.hashicorp.com/tutorials/terraform/eks)
+* [AWS EKS Networking](https://docs.aws.amazon.com/eks/latest/userguide/create-public-private-vpc.html)
+
 ## Diagrams
 
 * [Architecture Diagram](https://d1.awsstatic.com/Getting%20Started/eks-project/EKS-demo-app.e7ce7b188f2662b8573b5881a6b843e09caf729a.png)
@@ -28,9 +34,8 @@ aws eks --region <region-code> update-kubeconfig --name <cluster_name>
 * [Local](https://registry.terraform.io/providers/hashicorp/local/latest)
 * [Null](https://registry.terraform.io/providers/hashicorp/null/latest)
 
-## Resources
+## Nginx ingress
 
-* [Architecture](https://aws.amazon.com/getting-started/hands-on/deploy-kubernetes-app-amazon-eks/)
-* [Terraform EKS tutorial](https://learn.hashicorp.com/tutorials/terraform/eks)
-* [AWS EKS Networking](https://docs.aws.amazon.com/eks/latest/userguide/create-public-private-vpc.html)
 * [Nginx Ingress](https://kubernetes.github.io/ingress-nginx/)
+* [Deployment](https://kubernetes.github.io/ingress-nginx/deploy/)
+
