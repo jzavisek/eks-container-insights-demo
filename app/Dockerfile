@@ -14,7 +14,7 @@ RUN npm install --only=production
 
 # Release
 FROM dependencies as release
-COPY index.web.js ./
+COPY index.js ./
 
 EXPOSE 3000
 

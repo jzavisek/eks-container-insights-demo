@@ -33,3 +33,4 @@ aws eks --region <region-code> update-kubeconfig --name <cluster_name>
 * [Architecture](https://aws.amazon.com/getting-started/hands-on/deploy-kubernetes-app-amazon-eks/)
 * [Terraform EKS tutorial](https://learn.hashicorp.com/tutorials/terraform/eks)
 * [AWS EKS Networking](https://docs.aws.amazon.com/eks/latest/userguide/create-public-private-vpc.html)
+* [Nginx Ingress](https://kubernetes.github.io/ingress-nginx/)
