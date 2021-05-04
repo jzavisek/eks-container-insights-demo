@@ -1,0 +1,16 @@
+# create configmap for cluster name and aws region for CloudWatch Logs
+# need to replace the placeholders jz-cwi-demo-eks-dev and eu-central-1
+# and need to replace "On" and "2020"
+# and need to replace "Off" and "On"
+apiVersion: v1
+data:
+  cluster.name: jz-cwi-demo-eks-dev
+  logs.region: eu-central-1
+  http.server: "On"
+  http.port: "2020"
+  read.head: "Off"
+  read.tail: "On"
+kind: ConfigMap
+metadata:
+  name: fluent-bit-cluster-info
+  namespace: amazon-cloudwatch

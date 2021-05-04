@@ -32,3 +32,14 @@ apply-fluentd:
 
 delete-fluentd:
 	kubectl delete -k ./fluentd/overlays/dev
+
+# Container insights
+
+kustomize-dev-container-insights: 
+	kustomize build ./container-insights/overlays/dev
+
+apply-dev-container-insights:
+	kustomize build ./container-insights/overlays/dev | kubectl apply -f -
+
+delete-dev-container-insights:
+	kustomize build ./container-insights/overlays/dev | kubectl delete -f -

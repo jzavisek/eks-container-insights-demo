@@ -1,0 +1,6 @@
+bases:
+  - ../../base
+resources:
+  - cwagent-config.yaml
+  - fluentbit-config.yaml
+  - service-account.yaml
