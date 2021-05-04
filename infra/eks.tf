@@ -24,13 +24,9 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "14.0.0"
 
-  cluster_version = "1.18"
-  cluster_name    = local.cluster_name
-  cluster_enabled_log_types = (
-    terraform.workspace == "prod"
-    ? ["api", "audit", "authenticator", "controllerManager", "scheduler"]
-    : []
-  )
+  cluster_version           = "1.19"
+  cluster_name              = local.cluster_name
+  cluster_enabled_log_types = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
 
   kubeconfig_aws_authenticator_env_variables = {
     AWS_PROFILE = var.aws_profile
@@ -57,8 +53,8 @@ module "eks" {
   }
 
   node_groups = {
-    t2small = {
-      instance_types   = ["t2.small"]
+    t2medium = {
+      instance_types   = ["t2.medium"]
       min_capacity     = 1
       max_capacity     = 5
       desired_capacity = 1
@@ -67,7 +63,7 @@ module "eks" {
         Project      = var.project
         Environment  = terraform.workspace
         NodeType     = "managed"
-        InstanceType = "t2.small"
+        InstanceType = "t2.medium"
       }
 
       additional_tags = {

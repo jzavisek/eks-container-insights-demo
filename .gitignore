@@ -1,4 +1,4 @@
 infra/.terraform
 infra/.terraform.lock.hcl
 infra/terraform.tfstate.d
-infra/kubeconfig_jz-demo-eks-dev
+infra/kubeconfig_*

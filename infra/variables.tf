@@ -7,7 +7,7 @@ variable "aws_region" {
 }
 
 variable "project" {
-  default = "jz-demo"
+  default = "jz-cwi-demo"
   type    = string
 }
 
