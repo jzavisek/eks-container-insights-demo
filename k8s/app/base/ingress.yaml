@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: web
@@ -7,11 +7,13 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-buffer-size: '8k'
 spec:
   rules:
-    # - host: www.my-project.io
+    #host: aa5cec35bb5aa4f60b06f67b3c181ba2-1808832783.eu-central-1.elb.amazonaws.com
     - http:
         paths:
           - path: /
             pathType: Prefix
             backend:
-              serviceName: web
-              servicePort: http
+              service:
+                name: web
+                port:
+                  name: http

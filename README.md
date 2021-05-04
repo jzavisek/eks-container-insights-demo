@@ -2,16 +2,52 @@
 
 ## Commands
 
+### 1. Create a cluster
 ```zsh
+cd ./infra
 terraform init
 terraform workspace new dev
 terraform workspace list
 terraform workspace select dev
 terraform apply
+```
 
+### 2. Configure kubectl
+
+```zsh
 export AWS_PROFILE=playground
-export KUBECONFIG=/Volumes/STRV/Dev/_Meetings/eks/infra/kubeconfig_jz-demo-eks-dev
-aws eks --region <region-code> update-kubeconfig --name <cluster_name>
+export KUBECONFIG=/path-to-project/infra/kubeconfig_jz-cwi-demo
+aws eks --region eu-central-1 update-kubeconfig --name jz-cwi-demo-eks-dev
+```
+
+### 3. Build app Docker image (optional)
+
+* Update ECR registry URL in the `Makefile`
+* Run:
+
+```zsh
+cd ./app
+make docker/image/build
+make docker/image/push
+```
+
+### 4. Deploy nginx ingress controller and app (optional)
+
+```zsh
+cd ./k8s
+make apply-nginx
+make apply-namespaces
+make apply-web
+```
+
+### 5. Deploy container insights
+
+* Update `eks.amazonaws.com/role-arn` in `service-account.yaml` (run `terraform output` to get it)
+* Run:
+
+```zsh
+cd ./k8s
+make apply-dev-container-insights
 ```
 
 ## Concepts

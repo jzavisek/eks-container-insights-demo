@@ -1,3 +1,5 @@
+# See https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
+
 data "tls_certificate" "cluster" {
   url = module.eks.cluster_oidc_issuer_url
 }

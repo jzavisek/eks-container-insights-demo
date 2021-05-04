@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: 805382315593.dkr.ecr.eu-central-1.amazonaws.com/jz-demo-web:latest
+          image: 805382315593.dkr.ecr.eu-central-1.amazonaws.com/jz-cwi-demo-web:latest
           imagePullPolicy: Always
           command: ["node", "index.js"]
           ports:

@@ -17,21 +17,21 @@ delete-nginx:
 # Web app
 
 kustomize-web:
-	kubectl kustomize ./app/overlays/dev
+	kustomize build ./app/overlays/dev
 
 apply-web:
-	kubectl apply -k ./app/overlays/dev
+	kustomize build ./app/overlays/dev | kubectl apply -f -
 
 delete-web:
-	kubectl delete -k ./app/overlays/dev
+	kustomize build ./app/overlays/dev | kubectl delete -f -
 
 # Fluentd
 
 apply-fluentd:
-	kubectl apply -k ./fluentd/overlays/dev
+	kustomize build ./fluentd/overlays/dev | kubectl apply -f - 
 
 delete-fluentd:
-	kubectl delete -k ./fluentd/overlays/dev
+	kustomize build ./fluentd/overlays/dev | kubectl delete -f -
 
 # Container insights
 

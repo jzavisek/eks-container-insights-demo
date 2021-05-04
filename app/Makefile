@@ -4,7 +4,7 @@ SHELL	:= sh
 
 aws_region ?= eu-central-1
 tag ?= latest
-ecr_url ?= 805382315593.dkr.ecr.$(aws_region).amazonaws.com/jz-demo-web
+ecr_url ?= 805382315593.dkr.ecr.$(aws_region).amazonaws.com/jz-cwi-demo-web
 
 #  Docker commands
 

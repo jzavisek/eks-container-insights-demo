@@ -18,7 +18,7 @@ These steps basically follow process described in the links above.
 
 ```
 ClusterName='jz-cwi-demo-eks-dev'
-LogRegion='us-west-2'
+LogRegion='eu-central-1'
 FluentBitHttpPort='2020'
 FluentBitReadFromHead='Off'
 [[ ${FluentBitReadFromHead} = 'On' ]] && FluentBitReadFromTail='Off'|| FluentBitReadFromTail='On'

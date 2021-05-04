@@ -5,5 +5,5 @@ commonLabels:
 bases:
   - ../../base
 images:
-  - name: 805382315593.dkr.ecr.eu-central-1.amazonaws.com/jz-demo-web
-    newTag: v1.0.0
+  - name: 805382315593.dkr.ecr.eu-central-1.amazonaws.com/jz-cwi-demo-web
+    newTag: latest

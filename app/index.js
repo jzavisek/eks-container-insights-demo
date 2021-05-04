@@ -15,9 +15,15 @@ const asyncRoute = (route) => (req, res, next) =>
 const app = express()
 
 app.get('/api', (req, res) => res.json({ hostname, app: 'api' }))
+
 app.get('/health-check', (req, res) =>
   res.json({ message: 'I am healthy 💊', app: 'api' }),
 )
+
+app.get('/log', (req, res) => {
+  console.log(JSON.stringify({ hostname, app: 'api', appTime: new Date().toISOString() }))
+  res.json({ hostname, app: 'api' })
+})
 
 app.get(
   '/',
